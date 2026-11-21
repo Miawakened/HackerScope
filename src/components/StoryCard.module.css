@@ -1,0 +1,132 @@
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.score {
+  display: flex;
+  flex: 0 0 56px;
+  min-height: 56px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 12px;
+  background: var(--surface-secondary);
+  color: var(--primary-hover);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.content {
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.title a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.title a:hover {
+  color: var(--story-link-hover);
+}
+
+.domain {
+  margin: 4px 0 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .score {
+    flex-basis: 48px;
+    min-height: 48px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+}
+
+.bookmarkButton,
+.bookmarkButtonActive {
+  display: grid;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.bookmarkButtonActive {
+  border-color: var(--primary);
+  background: var(--surface-secondary);
+  color: var(--primary-hover);
+}
+
+.bookmarkIcon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.bookmarkButtonActive .bookmarkIcon {
+  fill: currentColor;
+}
+
+.bookmarkButton:focus-visible,
+.bookmarkButtonActive:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.authorLink {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.authorLink:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.authorLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

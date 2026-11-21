@@ -1,0 +1,213 @@
+
+.feed {
+  width: 100%;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.category,
+.activeCategory {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.activeCategory {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.category,
+.activeCategory {
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.category:hover {
+  border-color: var(--success);
+  background: color-mix(in srgb, var(--success) 12%, var(--surface));
+}
+
+.activeCategory:hover {
+  border-color: var(--success);
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--success) 35%, transparent);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.heading h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.heading p {
+  margin: 7px 0 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.storyCount {
+  flex: 0 0 auto;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.emptyState {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .categories {
+    margin-right: -16px;
+    margin-bottom: 22px;
+  }
+
+  .heading h1 {
+    font-size: 23px;
+  }
+}
+
+.sortControl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: -12px 0 20px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.sortSelect {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--foreground);
+  font: inherit;
+  cursor: pointer;
+}
+
+.sortSelect:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.sortControl {
+  flex-wrap: wrap;
+}
+
+.authorInput {
+  width: 190px;
+  max-width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--foreground);
+  font: inherit;
+}
+
+.authorInput:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.scoreInput {
+  width: 100px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--foreground);
+  font: inherit;
+  appearance: textfield;
+}
+
+.scoreInput::-webkit-inner-spin-button,
+.scoreInput::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.scoreInput:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.checkboxControl input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: grid;
+  place-content: center;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.checkboxControl input::before {
+  content: "";
+  width: 4px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform 120ms ease-in-out;
+}
+
+.checkboxControl input:checked {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+.checkboxControl input:checked::before {
+  transform: rotate(45deg) scale(1);
+}
+
+.checkboxControl {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 8px;
+  white-space: nowrap;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.checkboxControl input {
+  flex: 0 0 16px;
+}

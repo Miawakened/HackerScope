@@ -1,0 +1,61 @@
+
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.card {
+  width: min(100%, 520px);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  text-align: center;
+}
+
+.brand {
+  margin-bottom: 24px;
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.card h1 {
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.card > p:not(.brand) {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.retryButton {
+  display: block;
+  margin: 24px auto 0;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 9px;
+  background: var(--primary);
+  color: #ffffff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.retryButton:focus-visible,
+.backLink:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--text-secondary);
+  text-decoration: underline;
+}

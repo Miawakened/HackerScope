@@ -1,0 +1,24 @@
+
+.toggle {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--foreground);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}

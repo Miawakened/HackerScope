@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import StoreProvider from "./StoreProvider";
 import "./globals.css";
+import { Suspense } from "react";
+import ThemeInitializer from "../components/ThemeInitializer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +22,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+      <ThemeInitializer />
+      <Suspense
+  fallback={
+    <div style={{ padding: "2rem", textAlign: "center" }}>
+      Loading HackerScope...
+    </div>
+  }
+>
+  <StoreProvider>{children}</StoreProvider>
+</Suspense>
+      </body>
     </html>
   );
 }
