@@ -25,6 +25,8 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
 }
 
 .comment {
@@ -32,6 +34,8 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface);
+  min-width: 0;
+  max-width: 100%;
 }
 
 .meta {
@@ -51,6 +55,19 @@
   margin: 10px 0 0;
   font-size: 14px;
   line-height: 1.6;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.text :global(pre) {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.text :global(img) {
+  max-width: 100%;
+  height: auto;
 }
 
 .replies {
