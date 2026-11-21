@@ -31,7 +31,7 @@ export default function ThemeToggle() {
       aria-pressed={theme === "dark"}
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
     >
-      {theme === "light" ? "☾" : "☀"}
+    {theme === "light" ? "\u263E\uFE0E" : "\u2600\uFE0E"}
     </button>
   );
 }
