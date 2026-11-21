@@ -1,11 +1,18 @@
 
 .toggle {
-  padding: 6px 12px;
+  display: inline-grid;
+  flex: 0 0 40px;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: 1px solid var(--border);
   border-radius: 50%;
   background: var(--surface);
   color: var(--foreground);
   font: inherit;
+  font-size: 20px;
+  line-height: 1;
   cursor: pointer;
   transition:
     background-color 180ms ease,
