@@ -33,6 +33,19 @@ export default function RootLayout({ children }) {
 >
   <StoreProvider>{children}</StoreProvider>
 </Suspense>
+
+<footer className="privacyFooter">
+          <details>
+            <summary>Privacy &amp; Data</summary>
+            <p>
+              Bookmarks, reading history, and theme preference are saved in
+              this browser and are not uploaded to a HackerScope database.
+              Searches are sent to Algolia to return results, and story and
+              comment data comes from the Hacker News APIs. People sharing this
+              browser profile may see its saved items.
+            </p>
+          </details>
+        </footer>
       </body>
     </html>
   );

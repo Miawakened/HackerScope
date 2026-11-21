@@ -73,3 +73,31 @@ a {
   text-decoration: none;
 }
 
+
+.privacyFooter {
+  width: min(900px, calc(100% - 32px));
+  margin: 18px auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.privacyFooter summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.privacyFooter summary:hover {
+  color: var(--primary-hover);
+}
+
+:root[data-theme="dark"] .privacyFooter summary:hover {
+  color: var(--story-link-hover);
+}
+
+.privacyFooter p {
+  max-width: 760px;
+  margin-top: 8px;
+}
