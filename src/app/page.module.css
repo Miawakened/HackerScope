@@ -111,7 +111,7 @@ a.tagline:hover {
     padding: 0 16px 32px;
   }
 
-  .tagline {
+  p.tagline {
     display: none;
   }
 
