@@ -16,12 +16,12 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --background: #0b0812;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface-secondary: rgba(138, 85, 255, 0.12);
+  --background: #0b0710;
+  --surface: rgba(84, 72, 95, 0.28);
+  --surface-secondary: rgba(84, 72, 95, 0.18);
+  --border: rgba(154, 136, 165, 0.20);
   --foreground: #eaeaf0;
   --text-secondary: #a1a1b2;
-  --border: #2a2436;
   --primary: #8a55ff;
   --primary-hover: #9333ea;
   --link-hover: #22c55e;
@@ -50,6 +50,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(91, 67, 99, 0.12),
+      transparent 62%
+    ),
+    var(--background);
 }
 
 * {

@@ -2,7 +2,7 @@
 .page {
   min-height: 100vh;
   padding: 0 24px 48px;
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
 }
 
@@ -32,6 +32,10 @@
   font-weight: 800;
 }
 
+:global(:root[data-theme="dark"]) .logoMark {
+  color: var(--story-link-hover);
+}
+
 .backLink {
   color: var(--text-secondary);
   font-size: 14px;
@@ -40,6 +44,10 @@
 
 .backLink:hover {
   color: var(--primary-hover);
+}
+
+:global(:root[data-theme="dark"]) .backLink:hover {
+  color: var(--story-link-hover);
 }
 
 .main {
@@ -60,6 +68,10 @@
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+
+:global(:root[data-theme="dark"]) .eyebrow {
+  color: var(--story-link-hover);
 }
 
 .profileHeading {

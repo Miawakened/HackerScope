@@ -28,6 +28,11 @@
   outline: 3px solid #8a55ff22;
 }
 
+:global(:root[data-theme="dark"]) .inputWrapper:focus-within {
+  border-color: var(--story-link-hover);
+  outline-color: rgba(34, 163, 90, 0.22);
+}
+
 .searchIcon {
   color: var(--text-secondary);
   font-size: 20px;

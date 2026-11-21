@@ -50,6 +50,22 @@
     color-mix(in srgb, var(--success) 35%, transparent);
 }
 
+:global(:root[data-theme="dark"]) .category:hover {
+  border-color: #168447;
+  background: color-mix(in srgb, #168447 12%, var(--surface));
+}
+
+:global(:root[data-theme="dark"]) .activeCategory {
+  border-color: #168447;
+  background: #168447;
+}
+
+:global(:root[data-theme="dark"]) .activeCategory:hover {
+  border-color: #126c38;
+  background: #126c38;
+  box-shadow: 0 0 0 2px rgba(34, 163, 90, 0.25);
+}
+
 .heading {
   display: flex;
   align-items: center;

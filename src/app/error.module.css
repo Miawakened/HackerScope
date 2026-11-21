@@ -4,7 +4,7 @@
   min-height: 100vh;
   place-items: center;
   padding: 24px;
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
 }
 
@@ -58,4 +58,12 @@
   margin-top: 16px;
   color: var(--text-secondary);
   text-decoration: underline;
+}
+
+.backLink:hover {
+  color: var(--primary-hover);
+}
+
+:global(:root[data-theme="dark"]) .backLink:hover {
+  color: var(--story-link-hover);
 }
